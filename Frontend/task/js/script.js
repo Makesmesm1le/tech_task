@@ -2,25 +2,25 @@
     // slides info
     const slides = [
         {
-            photo: "images/ellipse14.png",
+            photo: "images/Ellipse14.png",
             name: "Albert Abello",
             position: "Director of Growth",
             quote: "This magical product actually works! It has radically changed the way we build our audiences. Increasing new customer sales by 6x in our most mature market.",
         },
         {
-            photo: "images/ellipse14.png",
+            photo: "images/Ellipse14.png",
             name: "Elizabeth Draw",
             position: "CTO",
             quote: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit libero ratione ipsum.",
         },
         {
-            photo: "images/ellipse14.png",
+            photo: "images/Ellipse14.png",
             name: "Victor Cramnik",
             position: "Sale manager",
             quote: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit libero ratione ipsum deserunt doloribus aut explicabo enim incidunt repellat.",
         },
         {
-            photo: "images/ellipse14.png",
+            photo: "images/Ellipse14.png",
             name: "Daria Levina",
             position: "Product manager",
             quote: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit libero ratione ipsum deserunt doloribus aut explicabo enim incidunt repellat.",
