@@ -149,7 +149,7 @@ nav {
   
 
 .hero {
-  background-image: url("/../images/champ.png");
+  background-image: url("../images/champ.png");
   background-size: cover;
   background-position: center;
   height: 700px; /* можешь менять высоту */
