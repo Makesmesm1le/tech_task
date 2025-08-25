@@ -497,7 +497,7 @@ nav {
 }
 
         .angebot-section{
-      max-width:1200px;
+      max-width:1600px;
       margin:48px auto;
       padding:0 20px;
     }
@@ -580,6 +580,99 @@ nav {
     @media (max-width: 640px){
       .form-grid{ grid-template-columns: 1fr; }
     }
+    /* Загрузка файла */
+.file-upload label {
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.file-upload .hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-style: italic;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Заголовки у textarea и select */
+.form-group label {
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Заголовок перед чекбоксом */
+.checkbox-title {
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Чекбокс и текст в одну строку */
+.checkbox-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.submit-btn {
+  background-color: #b08b55;   /* золотой цвет */
+  color: #fff;                 /* белый текст */
+  border: none;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;          /* лёгкое скругление */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #9c7848;   /* чуть темнее при наведении */
+  transform: translateY(-2px); /* лёгкий подскок */
+}
+
+.submit-btn:active {
+  transform: translateY(0);    /* убираем подскок при клике */
+}
+.vorteile-images {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;              /* чуть меньше расстояние */
+  align-items: flex-start; /* прижимаем к левому краю */
+  margin-left: 20px;      /* двигаем чуть ближе к форме */
+}
+
+.vorteile-images img {
+  width: 170px;            /* немного уменьшил размер */
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+/* 📱 Адаптив */
+@media (max-width: 900px) {
+  .vorteile {
+    text-align: center; /* центрируем текст списка */
+  }
+  .vorteile ul {
+    padding-left: 0;
+  }
+  .vorteile li {
+    padding-left: 0;
+  }
+  .vorteile li::before {
+    position: static;   /* убираем маркер слева */
+    margin-right: 6px;  /* отступ справа */
+  }
+  .vorteile-images {
+    align-items: center;   /* центрируем картинки */
+    margin-left: 0;        /* убираем сдвиг */
+  }
+}
 
      .testimonials {
       max-width: 1600px;
@@ -669,7 +762,7 @@ nav {
     }
 
     .clients-logos img {
-      max-height: 60px;
+      max-height: 120px;
       object-fit: contain;
       filter: grayscale(100%);
       transition: filter 0.3s ease;
