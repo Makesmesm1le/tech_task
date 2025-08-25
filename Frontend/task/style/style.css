@@ -149,7 +149,7 @@ nav {
   
 
 .hero {
-  background-image: url("../images/champ.png");
+  background-image: url("images/champ.png");
   background-size: cover;
   background-position: center;
   height: 700px; /* можешь менять высоту */
@@ -166,60 +166,70 @@ nav {
 }
 
 .features {
+  width: 100%; /* фон на всю ширину */
+  background-color: #f8f5f1;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
 
+.features-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряд на десктопе */
-  gap: 20px;
-  padding: 40px;
-  background-color: #f8f5f1; /* нежный бежевый фон */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* карточки одинаковой ширины */
+  gap: 30px;
+
+  max-width: 1600px;  /* ограничение ширины */
+  margin: 0 auto;     /* центрируем */
+  justify-items: center; /* центрируем карточки в сетке */
 }
 
 .feature-card {
-  background: #f3efea; /* светлый фон карточки */
-  border-radius: 10px;
+  background: #f3efea;
+  border-radius: 12px;
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 350px;   /* фиксированная одинаковая ширина */
+  min-height: 420px; /* если нужно одинаковая высота */
 }
 
 .feature-card img {
-  height: 280px;
+  max-height: 230px;
   width: auto;
-  margin-bottom: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 20px;
   object-fit: contain;
 }
 
 .feature-card p {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: #333;
 }
 
-/* Ховер эффект */
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.1);
 }
 
 /* Адаптив */
-@media (max-width: 1024px) {
-  .features {
-    grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд на планшете */
+@media (max-width: 1200px) {
+  .feature-card {
+    width: 300px;
   }
 }
 
 @media (max-width: 600px) {
-  .features {
-    grid-template-columns: 1fr; /* по одной карточке на мобиле */
-  }
-  
-  .feature-card img {
-    max-width: 200px; /* немного уменьшаем картинку на мобиле */
+  .feature-card {
+    width: 100%; /* на мобиле карточка на всю ширину */
+    max-width: 320px;
   }
 }
+
 
 
  .description {
@@ -659,7 +669,7 @@ nav {
     }
 
     .clients-logos img {
-      max-height: 100px;
+      max-height: 120px;
       object-fit: contain;
       filter: grayscale(100%);
       transition: filter 0.3s ease;
