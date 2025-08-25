@@ -1,114 +1,63 @@
 
-    // slides info
-    const slides = [
-        {
-            photo: "images/Ellipse14.png",
-            name: "Albert Abello",
-            position: "Director of Growth",
-            quote: "This magical product actually works! It has radically changed the way we build our audiences. Increasing new customer sales by 6x in our most mature market.",
-        },
-        {
-            photo: "images/Ellipse14.png",
-            name: "Elizabeth Draw",
-            position: "CTO",
-            quote: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit libero ratione ipsum.",
-        },
-        {
-            photo: "images/Ellipse14.png",
-            name: "Victor Cramnik",
-            position: "Sale manager",
-            quote: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit libero ratione ipsum deserunt doloribus aut explicabo enim incidunt repellat.",
-        },
-        {
-            photo: "images/Ellipse14.png",
-            name: "Daria Levina",
-            position: "Product manager",
-            quote: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit libero ratione ipsum deserunt doloribus aut explicabo enim incidunt repellat.",
-        }
-    ];
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".site-header");
+    const burger = document.getElementById("burger");
 
-    let currentSlide = 0;
+    if (header && burger) {
+      burger.addEventListener("click", () => {
+        header.classList.toggle("open");
 
-    // slider
-    function showSlide(index) {
-        const slide = slides[index];
-        document.getElementById("author-photo").src = slide.photo;
-        document.getElementById("author-name").textContent = slide.name;
-        document.getElementById("author-position").textContent = slide.position;
-        document.getElementById("quote-text").textContent = slide.quote;
-        document.getElementById("slide-counter").textContent = `0${index + 1} / 0${slides.length}`;
+        // для доступности
+        const expanded = burger.getAttribute("aria-expanded") === "true";
+        burger.setAttribute("aria-expanded", !expanded);
+      });
     }
+  });
 
-    // next slide
-    function prevSlide() {
-        currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
-        showSlide(currentSlide);
-    }
 
-    // prev slide
-    function nextSlide() {
-        currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
-        showSlide(currentSlide);
-    }
+const galleryImages = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = lightbox.querySelector('.lightbox-image');
+const closeBtn = lightbox.querySelector('.close');
+const prevBtn = lightbox.querySelector('.prev');
+const nextBtn = lightbox.querySelector('.next');
+const counter = document.getElementById('counter');
 
-    showSlide(currentSlide);
+let currentIndex = 0;
 
-    
-    function toggleSpoiler(clickedSpoiler) {
+// Открыть лайтбокс
+galleryImages.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentIndex = index;
+    showImage(index);
+    lightbox.style.display = 'flex';
+  });
+});
 
-        const allSpoilers = document.querySelectorAll('.spoiler-container');
-    
-        allSpoilers.forEach(spoiler => {
-    
-            const isClickedSpoiler = spoiler === clickedSpoiler;
-            
-        
-            if (isClickedSpoiler) {
-                spoiler.classList.toggle('open');
-            } else {
-                spoiler.classList.remove('open'); 
-            }
-    
-            // +-
-            const toggleIcon = spoiler.querySelector('.toggle-icon');
-            toggleIcon.textContent = spoiler.classList.contains('open') ? '×' : '+';
-        });
-    }
+function showImage(index) {
+  lightboxImage.src = galleryImages[index].src;
+  counter.textContent = `${index + 1} / ${galleryImages.length}`;
+}
 
-    //form
- const emailInput = document.getElementById('email');
- const errorMessage = document.getElementById('error-message');
+// Закрыть
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
 
- // email validation
- emailInput.addEventListener('input', function() {
-     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-     
-     if (emailPattern.test(emailInput.value)) {
-         emailInput.classList.remove('invalid');
-         emailInput.classList.add('valid');
-         errorMessage.style.display = 'none';
-     } else {
-         emailInput.classList.remove('valid');
-         emailInput.classList.add('invalid');
-         errorMessage.style.display = 'block';
-     }
- });
+// Переключение
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  showImage(currentIndex);
+});
 
- 
- 
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  showImage(currentIndex);
+});
 
- const sideMenu = document.getElementById('sideMenu');
-    
- // side-menu
- function toggleMenu() {
-     sideMenu.classList.toggle('open');
- }
-
- // close menu
- document.addEventListener('click', function(event) {
-     const isClickInside = sideMenu.contains(event.target) || event.target.classList.contains('burger-icon');
-     
-     if (!isClickInside) {
-         sideMenu.classList.remove('open');
-     }
- });
+// Закрыть по клику вне картинки
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
