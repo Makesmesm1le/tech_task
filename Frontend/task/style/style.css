@@ -497,7 +497,7 @@ nav {
 }
 
         .angebot-section{
-      max-width:1600px;
+      max-width:1200px;
       margin:48px auto;
       padding:0 20px;
     }
@@ -669,7 +669,7 @@ nav {
     }
 
     .clients-logos img {
-      max-height: 120px;
+      max-height: 90px;
       object-fit: contain;
       filter: grayscale(100%);
       transition: filter 0.3s ease;
