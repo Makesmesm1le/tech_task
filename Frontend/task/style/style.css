@@ -177,7 +177,7 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* карточки одинаковой ширины */
   gap: 30px;
 
-  max-width: 1200px;  /* ограничение ширины */
+  max-width: 1600px;  /* ограничение ширины */
   margin: 0 auto;     /* центрируем */
   justify-items: center; /* центрируем карточки в сетке */
 }
