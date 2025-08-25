@@ -239,6 +239,52 @@
           Bitte teilen Sie uns mit, ob bereits ein fertiges Design vorliegt, welches nur noch auf die Etiketten
           adaptiert werden muss.
         </p>
+        <!-- Новый блок: загрузка файла -->
+<div class="form-group file-upload">
+  <label for="logo">Vorhandener Entwurf/Logo</label>
+  <input class="input" type="file" id="logo" name="logo">
+  <small class="hint">
+    Sie haben bereits einen Entwurf oder ein Logo? Dann können Sie es hier hochladen. 
+    Für ein optisch ansprechendes Ergebnis, verwenden Sie bitte Vektorgrafiken, falls vorhanden.
+  </small>
+</div>
+
+<!-- Сообщение -->
+<div class="form-group">
+  <label for="message">Nachricht</label>
+  <textarea class="input" id="message" name="message" rows="5"></textarea>
+</div>
+
+<!-- Выпадающий список -->
+<div class="form-group">
+  <label for="source">Wie sind Sie auf uns aufmerksam geworden?</label>
+  <select class="input" id="source" name="source">
+    <option>Keine Angabe</option>
+    <option>Google</option>
+    <option>Empfehlung</option>
+    <option>Social Media</option>
+    <option>Sonstiges</option>
+  </select>
+</div>
+
+<!-- Заголовок перед чекбоксом -->
+<p class="checkbox-title">Einwilligung zur Datenverarbeitung *</p>
+
+<!-- Чекбокс согласия -->
+<div class="form-block checkbox-block">
+  <label class="checkbox-inline">
+    <input type="checkbox" required>
+    Ich habe die Datenschutzerklärung zur Kenntnis genommen. 
+    Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage 
+    elektronisch erhoben und gespeichert werden.
+  </label>
+  <p class="form-note">
+    Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@ihr-champagner.de widerrufen.
+  </p>
+</div>
+
+<!-- Кнопка -->
+<button type="submit" class="submit-btn">Absenden</button>
       </form>
 
       <!-- Правая колонка: список преимуществ -->
@@ -252,6 +298,12 @@
           <li>Grafikdienstleistung</li>
           <li>SSL Schutz</li>
         </ul>
+          <div class="vorteile-images">
+    <img src="images/ssl-1.png" alt="Bild 1">
+    <img src="images/paypal-logo.png" alt="Bild 2">
+    <img src="images/hedo_logo.png" alt="Bild 3">
+    <img src="images/mangin-logo.png" alt="Bild 4">
+  </div>
       </aside>
     </div>
   </section>
