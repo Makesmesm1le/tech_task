@@ -1,213 +1,442 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/fonts-css">
-    <title>tech task</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Header – Ihr-Champagner</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">LOGO</div>
-        <div class="burger-icon" onclick="toggleMenu()">&#9776;</div>
-        <nav class="menu">
-            <a href="#">How it works</a>
-            <a href="#">About</a>
-            <a href="#">Instructions</a>
-            <a href="#">Accounts</a>
-            <a href="#">Platforms</a>
-            <a href="#">Contact</a>
-        </nav>
-        <div class="burger-icon" onclick="toggleMenu()">&#9776;</div>
-        <div id="sideMenu" class="side-menu">
-             <ul>
-                <li>how it works</li>
-                <li>About</li>
-                <li>Instructions</li>
-                <li>Accounts</li>
-                <li>Platforms</li>
-                <li>Contact</li>
-            </ul>
+
+<header class="site-header" id="siteHeader">
+  <div class="container">
+ <a href="#" class="logo" aria-label="Ihr-Champagner – Startseite">
+  <img src="images/logo.png" alt="Ihr-Champagner Logo">
+</a>
+
+    <div class="nav-wrap">
+      <nav aria-label="Hauptmenü">
+        <!-- Подставь реальные ссылки -->
+        <a class="nav-link" href="#champagner">Champagner</a>
+        <a class="nav-link" href="#preise">Preise</a>
+        <a class="nav-link" href="#referenzen">Referenzen</a>
+        <a class="nav-link" href="#ueber-uns">Über uns</a>
+        <a class="nav-link" href="#blog">Blog</a>
+        <a class="nav-link" href="#bestellen">Bestellen</a>
+        <a class="nav-link" href="#newsletter">Newsletter</a>
+        <a class="nav-link" href="#en">EN</a>
+      </nav>
+
+      <a class="cart" href="#cart" aria-label="Warenkorb">
+        <!-- простая иконка сумки -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 7h12l-1 13H7L6 7Z"></path>
+          <path d="M9 7a3 3 0 0 1 6 0"></path>
+        </svg>
+     <span class="cart-count" aria-label="Anzahl Artikel">1</span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Menü öffnen/schließen" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- мобильная панель -->
+  <div class="mobile-panel" id="mobilePanel" aria-label="Mobiles Menü">
+    <a href="#champagner">Champagner</a>
+    <a href="#preise">Preise</a>
+    <a href="#referenzen">Referenzen</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#blog">Blog</a>
+    <a href="#bestellen">Bestellen</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="#en">EN</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Individueller Champagner
+    <br>für jeden Anlass</h1>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature-card">
+    <img src="images/bottle.png" alt="Kundengeschenk">
+    <p>Kundengeschenk</p>
+  </div>
+  <div class="feature-card">
+    <img src="images/box.png" alt="Gratifikation">
+    <p>Gratifikation</p>
+  </div>
+  <div class="feature-card">
+    <img src="images/rings.png" alt="Hochzeit">
+    <p>Hochzeit</p>
+  </div>
+  <div class="feature-card">
+    <img src="images/hb.png" alt="Special">
+    <p>Special</p>
+  </div>
+</section>
+
+  <section class="description">
+    <h2>ETWAS GANZ BESONDERES</h2>
+
+    <div class="columns">
+      <div class="column">
+        <h3>PRÄSENTIEREN SIE SICH UND IHRE FIRMA IM EIGENEN DESIGN</h3>
+        <p>
+          Ob Hotellerie oder Lounge, ob Event- oder Firmenpräsent – Ihre Unternehmensidentität 
+          als einzigartiges Geschmackserlebnis. Wir bieten eine Vielzahl von Ideen und 
+          Gestaltungsmöglichkeiten.
+        </p>
+      </div>
+
+      <div class="column">
+        <h3>PROFITIEREN SIE AM MARKT MIT IHREM PERSONALISIERTEN CHAMPAGNER</h3>
+        <p>
+          Personalisieren Sie das Etikett nach Ihren eigenen Bedürfnissen. Ein Champagner, verziert 
+          mit Ihrem Logo oder Erscheinungsbild, wird den Empfängern immer im Gedächtnis bleiben 
+          und generiert nachhaltige Markenbildung.
+        </p>
+      </div>
+
+      <div class="column">
+        <h3>EINE EXKLUSIVE GRÖSSE FÜR EINEN EXKLUSIVEN ANLASS</h3>
+        <p>
+          Ihr persönlicher Champagner erzeugt Eindruck auf den ersten Blick. Machen Sie den Anlass 
+          zum unvergesslichen Erlebnis. Als Brut oder Rosé in den Größen ab 0,75L bis 9L erhältlich.
+        </p>
+      </div>
+    </div>
+  </section>
+
+    <section class="bestellen">
+    <h2>SO EINFACH GEHT'S</h2>
+    <div class="divider"></div>
+
+    <div class="columns">
+      <div class="column">
+        <img src="images/letter.png" alt="Bestellen Icon">
+        <h3>BESTELLEN</h3>
+        <p>
+          Teilen Sie uns Ihren Wunsch-Champagner und Anzahl per Kontaktformular mit 
+          oder bestellen Sie direkt in unserem Shop.
+        </p>
+      </div>
+
+      <div class="column">
+        <img src="images/t-letter.png" alt="Individualisieren Icon">
+        <h3>INDIVIDUALISIEREN</h3>
+        <p>
+          Unsere Grafikabteilung meldet sich telefonisch bei Ihnen und entwickelt 
+          mit Ihnen Ihr individuelles Etikett.
+        </p>
+      </div>
+
+      <div class="column">
+        <img src="images/glass.png" alt="Genießen Icon">
+        <h3>GENIESSEN</h3>
+        <p>
+          Innerhalb von ca. 14 Tagen erhalten Sie Ihre individuellen Champagnerflaschen 
+          zum Genießen, Präsentieren & Anstoßen.
+        </p>
+      </div>
+    </div>
+
+    <a href="#" class="btn">Jetzt bestellen</a>
+  </section>
+
+ <section class="products-section">
+    <!-- Левая часть -->
+    <div class="products-left">
+      <img src="images/bottle.png" alt="Wine bottles">
+    </div>
+
+    <!-- Правая часть -->
+    <div class="products-right">
+      <div class="product-card">
+        <div class="badge">RED</div>
+        <img src="images/bottle.png" alt="Crimson Reserve 2016">
+        <div class="product-price">
+          €150,00
+          <span>€200,00 / l</span>
         </div>
-        <div class="right-section">
-            <select name="" id="" class="language">
-                <option value="EN">EN</option>
-                <option value="RO">RO</option>
-                <option value="DE">DE</option>
-            </select>
-            <button action="button" class="login-button">SIGN FOR FREE</button>
+        <h3>Crimson Reserve 2016</h3>
+        <p class="availability">● Available for pickup at Lively Store</p>
+      </div>
+
+      <div class="product-card">
+        <div class="badge">RED</div>
+        <img src="images/bottle.png" alt="Harvest Moon 2019">
+        <div class="product-price">
+          €33,00
+          <span>€44,00 / l</span>
         </div>
-    </header>
-    <main>
-        <div class="main-first-section">
-            <div class="text-block">
-                <h1>Trade everywhere. 
-                    Invest here!</h1>
-                <p class="descr">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. </p>
-                <button class="button">START TRADING</button>
-            </div>
-            <div class="image">
-                <img class="prop" src="images/5eb420490d0c5f30afda64fe_blocks3 1.png" alt="">
-            </div>
+        <h3>Harvest Moon 2019</h3>
+        <p class="availability">● Available for pickup at Lively Store</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="angebot-section">
+    <h2 class="angebot-title">INDIVIDUELLES ANGEBOT ANFORDERN</h2>
+    <div class="gold-line" aria-hidden="true"></div>
+    <p class="subtitle">
+      Sie sind Großkunde oder wünschen eine individuelle Beratung? Dann nutzen Sie unser Anfrageformular
+      und wir erstellen Ihnen ein individuelles Angebot.
+    </p>
+
+    <div class="content">
+      <!-- Левая колонка: форма -->
+      <form>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input class="input" type="text" id="name" name="name" placeholder="Vor- und Nachname">
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input class="input" type="email" id="email" name="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="telefon">Telefonnummer</label>
+            <input class="input" type="tel" id="telefon" name="telefon" placeholder="Telefon">
+          </div>
+          <div class="form-group">
+            <label for="anzahl">Anzahl der Flaschen</label>
+            <input class="input" type="number" id="anzahl" name="anzahl" placeholder="Anzahl">
+          </div>
         </div>
-        <div class="main-second-section">
-            <p class="title">Getting Started Is <span class="bg">Fast & Easy</span></p>
-            <div class="block block1">
-                <span class="block-number">01.</span>
-                <div class="block-title">Register</div>
-                <div class="block-text">Complete the simple registration to get your trading credentials.</div>
-            </div>
-            <div class="block block2"><span class="block-number">02.</span>
-                <div class="block-title">Verification</div>
-                <div class="block-text">Big Invest is required to verify your identity, upload your documents quickly and get approved in minutes.</div>
-            </div>
-            <div class="block block3"><span class="block-number">03.</span>
-                <div class="block-title">Deposit funds</div>
-                <div class="block-text">CBig Invest accepts credit cards and bank wires. Just use the secure deposit form and follow the steps.</div>
-            </div>
-            <div class="block block4"><span class="block-number">04.</span>
-                <div class="block-title">Start Trading</div>
-                <div class="block-text">Once your deposit has been credited, you can begin trading instantly. In no time you will see profits rolling into your account.</div>
-            </div>
-            <img src="images/Vector 34.png" alt="" class="vector1">
-            <img src="images/Vector 35.png" alt="" class="vector2">
-            <img src="images/Vector 36.png" alt="" class="vector3">
+
+        <div class="form-block">
+          <label>Für welchen Champagner interessieren Sie sich?</label>
+          <div class="check-row">
+            <label><input type="checkbox"> 0,75l Brut</label>
+            <label><input type="checkbox"> 0,75l Rosé</label>
+            <label><input type="checkbox"> 1,5l Brut</label>
+            <label><input type="checkbox"> 1,5l Rosé</label>
+            <label><input type="checkbox"> 3l Brut</label>
+            <label><input type="checkbox"> 6l Brut</label>
+            <label><input type="checkbox"> 9l Brut</label>
+          </div>
         </div>
-        <div class="main-third-section">
-            <div class="left-side">
-                <div class="slider-title">People love Big
-                    <span class="bg">Invest</span>
-                </div>
-                    <div class="slider-nav">
-                        <button href="" class="slider-button b1" onclick="prevSlide()"><</button>
-                        <button href="" class="slider-button b2" onclick="nextSlide()">></button>
-                    </div>
-            </div>
-            <div class="quote-block">
-                
-                <div class="author-info">
-                    <img src="" alt="Автор" class="author-photo" id="author-photo">
-                    <div class="author-name" id="author-name"></div>
-                    <div class="author-position" id="author-position"></div>
-                </div>
-                <img src="images/sign.png" alt="" class="sign"> 
-                <div class="quote-text" id="quote-text"></div>
-                <div class="slide-counter" id="slide-counter"></div> 
-                
-            </div>
-        
-        </div> 
-        <div class="main-fourth-section">
-            <div class="spoiler-main-title">Frequently asked <span class="bg">questions</span></div>
-            <div class="spoiler-box">
-                <div class="spoiler-container" onclick="toggleSpoiler(this)">
-                    <div class="spoiler-header">
-                    How do I change my details? <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="spoiler-content">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. All you need is the Internet because the necessary trading tools are already collected in one place and are available in a couple of clicks. Use only the best and develop with us!</div>
-                </div>
-            
-                <div class="spoiler-container" onclick="toggleSpoiler(this)">
-                    <div class="spoiler-header">
-                    What platforms will I be able to use? <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="spoiler-content">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. All you need is the Internet because the necessary trading tools are already collected in one place and are available in a couple of clicks. Use only the best and develop with us!</div>
-                </div>
-            
-                <div class="spoiler-container" onclick="toggleSpoiler(this)">
-                    <div class="spoiler-header">
-                    How do I change my details? <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="spoiler-content">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. All you need is the Internet because the necessary trading tools are already collected in one place and are available in a couple of clicks. Use only the best and develop with us!</div>
-                </div>
-                <div class="spoiler-container" onclick="toggleSpoiler(this)">
-                    <div class="spoiler-header">
-                    How do I change my details? <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="spoiler-content">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. All you need is the Internet because the necessary trading tools are already collected in one place and are available in a couple of clicks. Use only the best and develop with us!</div>
-                </div>
-                <div class="spoiler-container" onclick="toggleSpoiler(this)">
-                    <div class="spoiler-header">
-                    How do I change my details? <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="spoiler-content">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. All you need is the Internet because the necessary trading tools are already collected in one place and are available in a couple of clicks. Use only the best and develop with us!</div>
-                </div>
-                <div class="spoiler-container" onclick="toggleSpoiler(this)">
-                    <div class="spoiler-header">
-                    How do I change my details? <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="spoiler-content">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. All you need is the Internet because the necessary trading tools are already collected in one place and are available in a couple of clicks. Use only the best and develop with us!</div>
-                </div>
-                <div class="spoiler-container" onclick="toggleSpoiler(this)">
-                    <div class="spoiler-header">
-                    How do I change my details? <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="spoiler-content">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. All you need is the Internet because the necessary trading tools are already collected in one place and are available in a couple of clicks. Use only the best and develop with us!</div>
-                </div>
-            </div>
-        </div>  
-        <div class="main-fifth-section">
-            <div class="contact-block">
-                <p class="contact-title">Contact us!</p>
-                <p class="contact-info">The support staff and customer service are available to help you with any questions or needs you might have. Just drop us a line.</p>
-                <p class="contact-rights">This site is owned and operated by Kode Tech Solutions LTD</p>
-                <p class="contact-phone-title">Phone:</p>
-                <p class="contact-phone">442038857261</p>
-                <p class="contact-email-title">Email:</p>
-                <p class="contact-email">help@google.com</p>
-                <p class="contact-adress-title">Adress:</p>
-                <p class="contact-adress">Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Republic of the Marshall Islands, MH 96960</p>
-            </div>
-            <div class="form-block">
-                <form id="contactForm" novalidate>
-                    <label for="name"></label>
-                    <input type="text" id="name" name="name" placeholder="Name" required>
-            
-                    <label for="email" placeholder="email"></label>
-                    <input type="email" id="email" name="email" placeholder="email" required>
-                    <div id="error-message" class="error-message">Incorrect email type</div>
-            
-                    <label for="message"></label>
-                    <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
-            
-                    <button class="form-submit" type="submit">Send</button>
-                </form>
-            </div>
+
+        <div class="form-block">
+          <label>Besteht bereits ein vorhandenes Design?</label>
+          <div class="check-row">
+            <label><input type="radio" name="design" value="ja"> Ja</label>
+            <label><input type="radio" name="design" value="nein"> Nein</label>
+          </div>
         </div>
-    </main>
-    <footer>
-        <div class="footer-wrap">
-            <div class="footer_logo">LOGO</div>
-            <div class="risk-warn">
-                <p class="warn-title">Information and high risk warning:</p>
-                <div class="warn-text">Trading with foreign exchange (FX), contract for differences (CFDs) and precious metals carries a high level of risk that may not be suitable for all investors. Leverage creates additional risk and loss exposure. Before you decide to trade foreign exchange or contract for differences, carefully consider your investment objectives, experience level, and risk tolerance.</div>
-            </div>
-            <div class="disclamer">
-                <p class="disc-title">Legal disclaimer:</p>
-                <p class="disc-text">Forex trading entails significant risks and is not appropriate for all investors. The possibility of incurring substantial losses should be taken into account. It is therefore important to understand the possible consequences of investing. Traders should weigh their earning potential against the risks involved and act accordingly. Interactive Trade Ltd operating under brand and using domenLink domain within the European Economic Area.</p>
-            </div>
-            <ul class="footer-menu">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Instructions</a></li>
-                <li><a href="#">Platforms</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Sign in</a></li>
-                <li><a href="#">Sign up for free</a></li>
-            </ul>
-        </div>
-        <ul class="requier">
-            <li class="copyright">Copyright 2020, All Right Reserved</li>
-            <li class="terms">Terms and Conditions</li>
-            <li class="privacy">Privacy and Policy</li>
-            <li class="risks-and-warns">Risks Warnings</li>
-            <li class="launder">Anti-Money Laundering</li>
+
+        <!-- Текст под формой -->
+        <p class="form-note">
+          Bitte teilen Sie uns mit, ob bereits ein fertiges Design vorliegt, welches nur noch auf die Etiketten
+          adaptiert werden muss.
+        </p>
+      </form>
+
+      <!-- Правая колонка: список преимуществ -->
+      <aside class="vorteile">
+        <h3>Ihre Vorteile</h3>
+        <ul>
+          <li>Schnelle Lieferung</li>
+          <li>Persönliche Beratung</li>
+          <li>100% Service</li>
+          <li>Individuelle Etiketten</li>
+          <li>Grafikdienstleistung</li>
+          <li>SSL Schutz</li>
         </ul>
-    </footer>
-<script src="js/script.js"></script>
+      </aside>
+    </div>
+  </section>
+
+    <section class="testimonials">
+    <h2>KUNDENSTIMMEN</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="card-header">
+          <img src="images/march.jpg" alt="Emily Carter">
+          <h4>Emily Carter</h4>
+        </div>
+         <hr class="divider">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          I’ve tried many skincare brands, but these products truly stand out. 
+          My skin feels nourished, hydrated, and glowing. 
+          The natural ingredients make a huge difference.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-header">
+          <img src="images/march.jpg" alt="Olivia Bennett">
+          <h4>Olivia Bennett</h4>
+        </div>
+         <hr class="divider">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          After using this skincare line for a month, my complexion looks clearer and more even. 
+          The formulas are gentle yet effective, leaving my skin soft without any irritation at all.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-header">
+          <img src="images/march.jpg" alt="Isabella Hughes">
+          <h4>Isabella Hughes</h4>
+        </div>
+         <hr class="divider">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          The hydration boost is incredible! My dry skin feels replenished and smooth all day. 
+          I love how lightweight the products feel while delivering powerful results.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-header">
+          <img src="images/march.jpg" alt="Mia Reynolds">
+          <h4>Mia Reynolds</h4>
+        </div>
+         <hr class="divider">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          I’m impressed with how quickly I noticed improvements. 
+          Fine lines softened, and my skin’s texture became smoother. 
+          Plus, knowing it’s cruelty-free makes me feel good.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<section class="clients-section">
+    <h2>UNSERE KUNDEN</h2>
+    <div class="clients-logos">
+      <img src="images/riggs.png" alt="Riggs">
+      <img src="images/lladro.webp" alt="Lladró">
+      <img src="images/guerlain.png" alt="Guerlain">
+      <img src="images/gucci.png" alt="Gucci">
+      <img src="images/purobio.png" alt="PuroBIO">
+    </div>
+  </section>
+
+<section class="gallery-section">
+  <div class="gallery-container">
+    <h2>#ihrchampagner</h2>
+    <div class="underline"></div>
+    <div class="gallery">
+      <img src="images/trustpilot.png" alt="Champagne 1">
+      <img src="images/vine-picture.png" alt="Champagne 2">
+      <img src="images/view.png" alt="Champagne 3">
+      <img src="images/e-commerce.jpg" alt="Champagne 4">
+      <img src="images/e-commerce.jpg" alt="Champagne 5">
+      <img src="images/trustpilot.png" alt="Champagne 6">
+      <img src="images/view.png" alt="Champagne 7">
+      <img src="images/rings.png" alt="Champagne 8">
+    </div>
+  </div>
+</section>
+
+<!-- Лайтбокс -->
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <span class="prev">&#10094;</span>
+  <img class="lightbox-image" src="" alt="">
+  <span class="next">&#10095;</span>
+  <div class="counter" id="counter"></div>
+</div>
+
+  <section class="stats-section">
+    <div class="stat-item">
+      <h2>156</h2>
+      <h3>Products</h3>
+      <p>Each piece is thoughtfully crafted from premium materials to elevate your everyday style with elegance and durability. Whether you're adding a subtle touch or making a bold statement, our accessories are designed to complement and enhance your look with lasting quality.</p>
+    </div>
+
+    <div class="stat-item">
+      <h2>1500+</h2>
+      <h3>5 Star reviews</h3>
+      <p>Our customers’ satisfaction speaks for itself — with over 1,500 five-star reviews, we are a trusted destination for those who value quality, style, and exceptional service. Each review is a reflection of our commitment to excellence and the lasting impression our products make.</p>
+    </div>
+
+    <div class="stat-item">
+      <h2>est 1984</h2>
+      <h3>Trusted for 20+ years</h3>
+      <p>With decades of experience behind us, the journey from a small passion project to a trusted name in quality and design has been guided by dedication and vision. Our long-standing history is a reflection of unwavering commitment to craftsmanship and timeless style.</p>
+    </div>
+  </section>
+
+  <!-- Картинка на весь экран -->
+  <img src="images/view.png" alt="Landscape" class="fullwidth-image">
+
+  <footer>
+    <div class="footer-columns">
+
+      <!-- Контакты -->
+      <div class="footer-column">
+        <h4>KONTAKT</h4>
+        <p>Telefonische Unterstützung und Beratung unter:</p>
+        <p><strong>+49(0)6241 - 95 29 00</strong><br>Mo–Fr, 10:00–17:00 Uhr</p>
+        <p>Fax: +49(0)6241 - 95 29 05<br>info@ihr-champagner.de</p>
+      </div>
+
+      <!-- Информация -->
+      <div class="footer-column">
+        <h4>INFORMATIONEN</h4>
+        <ul>
+          <li><a href="#">Datenschutz</a></li>
+          <li><a href="#">AGB</a></li>
+          <li><a href="#">Widerrufsbelehrung</a></li>
+          <li><a href="#">Zahlungsmöglichkeiten</a></li>
+          <li><a href="#">Versandarten</a></li>
+          <li><a href="#">Impressum</a></li>
+        </ul>
+      </div>
+
+      <!-- О шампанском + бейджи -->
+      <div class="footer-column">
+        <h4>MEHR ÜBER CHAMPAGNER</h4>
+        <ul>
+          <li><a href="#">Champagner Geschichte</a></li>
+          <li><a href="#">Champagner Herstellung</a></li>
+        </ul>
+        <br>
+        <div class="badges">
+          <!-- Картинка над Trustpilot -->
+          <img src="images/e-commerce.jpg" alt="Best of 2018 Award">
+          <!-- Trustpilot -->
+          <img src="images/trustpilot.png" alt="Trustpilot Bewertung">
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-column newsletter">
+        <h4>NEWSLETTER</h4>
+        <p>Abonnieren Sie unseren Newsletter und erhalten Sie aktuelle Informationen und Angebote.</p>
+
+        <form>
+          <label for="nl-name">Name</label>
+          <input id="nl-name" type="text" name="name">
+
+          <label for="nl-email">E-Mailadresse</label>
+          <input id="nl-email" type="email" name="email">
+
+          <button type="submit">Anmelden</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      * Alle Preisangaben auf dieser Webseite (sofern nicht anders angegeben) zzgl. gesetzlicher MwSt.<br>
+      © 2024 Advanced Food GmbH
+    </div>
+  </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
