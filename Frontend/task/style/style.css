@@ -495,7 +495,35 @@ nav {
     max-width: 380px; /* фиксируем приятную ширину */
   }
 }
+.products-header{
+  width: 100%;
+  text-align: center;
+}
 
+.products-header h2{
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color:#26314e;
+}
+
+/* Чтобы заголовок занял отдельную строку при row-раскладке */
+.products-section{
+  flex-wrap: wrap; /* ВАЖНО: разрешаем перенос строк в flex-контейнере */
+}
+
+@media (min-width: 900px){
+  .products-header{
+    flex: 0 0 100%;   /* заголовок на всю ширину первой строки */
+    margin-bottom: 10px; /* небольшой отступ вниз — дополнительно к gap */
+  }
+}
+
+/* Мобильная типографика заголовка */
+@media (max-width: 600px){
+  .products-header h2{ font-size: 22px; }
+}
         .angebot-section{
       max-width:1200px;
       margin:48px auto;
