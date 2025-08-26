@@ -380,7 +380,7 @@ nav {
     }
 
     .products-left img {
-      width: 20%;              /* делаем меньше */
+      width: 40%;              /* делаем меньше */
       max-width: 500px;        /* ограничение сверху */
       border-radius: 8px;
       object-fit: contain;
