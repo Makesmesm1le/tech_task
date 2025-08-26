@@ -15,26 +15,34 @@
 </a>
 
     <div class="nav-wrap">
-      <nav aria-label="Hauptmenü">
-        <!-- Подставь реальные ссылки -->
-        <a class="nav-link" href="#champagner">Champagner</a>
-        <a class="nav-link" href="#preise">Preise</a>
-        <a class="nav-link" href="#referenzen">Referenzen</a>
-        <a class="nav-link" href="#ueber-uns">Über uns</a>
-        <a class="nav-link" href="#blog">Blog</a>
-        <a class="nav-link" href="#bestellen">Bestellen</a>
-        <a class="nav-link" href="#newsletter">Newsletter</a>
-        <a class="nav-link" href="#en">EN</a>
-      </nav>
+<nav aria-label="Hauptmenü">
+  <a class="nav-link" href="#champagner">Champagner</a>
+  <a class="nav-link" href="#preise">Preise</a>
+  <a class="nav-link" href="#referenzen">Referenzen</a>
+  <a class="nav-link" href="#ueber-uns">Über uns</a>
+  <a class="nav-link" href="#blog">Blog</a>
+  <a class="nav-link" href="#bestellen">Bestellen</a>
+  <a class="nav-link" href="#newsletter">Newsletter</a>
+  <a class="nav-link" href="#en">EN</a>
 
-      <a class="cart" href="#cart" aria-label="Warenkorb">
-        <!-- простая иконка сумки -->
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M6 7h12l-1 13H7L6 7Z"></path>
-          <path d="M9 7a3 3 0 0 1 6 0"></path>
-        </svg>
-     <span class="cart-count" aria-label="Anzahl Artikel">1</span>
-      </a>
+  <!-- корзина для десктопа -->
+  <a class="cart cart-desktop" href="#cart" aria-label="Warenkorb">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M6 7h12l-1 13H7L6 7Z"></path>
+      <path d="M9 7a3 3 0 0 1 6 0"></path>
+    </svg>
+    <span class="cart-count" aria-label="Anzahl Artikel">1</span>
+  </a>
+</nav>
+
+<!-- корзина для мобилы -->
+<a class="cart cart-mobile" href="#cart" aria-label="Warenkorb">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M6 7h12l-1 13H7L6 7Z"></path>
+    <path d="M9 7a3 3 0 0 1 6 0"></path>
+  </svg>
+  <span class="cart-count" aria-label="Anzahl Artikel">1</span>
+</a>
 
       <button class="burger" id="burger" aria-label="Menü öffnen/schließen" aria-expanded="false">
         <span></span>
@@ -157,12 +165,12 @@
   </div>
 
   <div class="products-left">
-    <img src="images/2wein.PNG" alt="Wine bottles">
+    <img src="images/2wein.png" alt="Wine bottles">
   </div>
 
   <div class="products-right">
     <div class="product-card">
-      <div class="badge">RED</div>
+      <div class="badge">bester Preis</div>
       <img src="images/bottle.png" alt="Crimson Reserve 2016">
       <div class="product-price">
         ab 29,90 €*
@@ -171,10 +179,11 @@
       <h3>Standardflasche 0,75l Brut</h3>
       <span><i>* Alle Preise ab Werk/Lager zzgl. MwSt und ggf. Transportkosten, sofern dieser von uns organisiert werden soll </i></span>
       <p class="availability">● Available for pickup at Lively Store</p>
+      <button type="submit" class="submit-btn">Absenden</button>
     </div>
 
     <div class="product-card">
-      <div class="badge">RED</div>
+      <div class="badge">bester Preis</div>
       <img src="images/bottle.png" alt="Harvest Moon 2019">
       <div class="product-price">
         ab 31,90 €*
@@ -183,6 +192,7 @@
       <h3>Standardflasche 0,75l Rosé</h3>
       <span><i>* Alle Preise ab Werk/Lager zzgl. MwSt und ggf. Transportkosten, sofern dieser von uns organisiert werden soll</i></span>
       <p class="availability">● Available for pickup at Lively Store</p>
+      <button type="submit" class="submit-btn">Absenden</button>
     </div>
   </div>
 </section>
@@ -302,7 +312,6 @@
           <li>Grafikdienstleistung</li>
           <li>SSL Schutz</li>
         </ul>
-      </aside>
     </div>
   </section>
 
@@ -311,55 +320,61 @@
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <div class="card-header">
-          <img src="images/march.jpg" alt="Emily Carter">
-          <h4>Emily Carter</h4>
+          <img src="images/automag.jpg" alt="Emily Carter">
+          <h4>HARALD SCHMIDT, FORMAXX AG</h4>
         </div>
          <hr class="divider">
         <div class="stars">★★★★★</div>
         <p class="testimonial-text">
-          I’ve tried many skincare brands, but these products truly stand out. 
-          My skin feels nourished, hydrated, and glowing. 
-          The natural ingredients make a huge difference.
+          “… Echt guter Service und super Qualität! Die Flaschen kamen bei der Büroeröffnung unserer
+Kollegin sehr gut an und waren ein herausragendes Präsent, was die anderen Gäste
+beeindruckt hat. Die Kollegin meinte spontan, dass sie für die Flasche nach dem Leeren im
+Büro ein repräsentatives Plätzchen findet, um an diesen schönen Tag zu erinnern! Da waren
+schon Einige kreativ und konnten sich gut vorstellen, zu welchem Anlass man so etwas
+Besonderes auch noch nutzen könnte.”
         </p>
       </div>
 
       <div class="testimonial-card">
         <div class="card-header">
-          <img src="images/march.jpg" alt="Olivia Bennett">
-          <h4>Olivia Bennett</h4>
+          <img src="images/marburg.jpg" alt="Olivia Bennett">
+          <h4>Martina Stöcklmeyer, Senior Marketing Managerin der Automag GmbH</h4>
         </div>
          <hr class="divider">
         <div class="stars">★★★★★</div>
         <p class="testimonial-text">
-          After using this skincare line for a month, my complexion looks clearer and more even. 
-          The formulas are gentle yet effective, leaving my skin soft without any irritation at all.
+          „Vielen Dank für die unkomplizierte und kompetente Beratung, der Champagner mit dem
+individuellen Etikett sieht super aus. Die Lieferung ging sehr schnell, wir werden sicher
+wieder bestellen!“
         </p>
       </div>
 
       <div class="testimonial-card">
         <div class="card-header">
-          <img src="images/march.jpg" alt="Isabella Hughes">
-          <h4>Isabella Hughes</h4>
+          <img src="images/formax.png" alt="Isabella Hughes">
+          <h4>Markus Hofmann, CEO der MEMO-MIND Brainproducts GmbH</h4>
         </div>
          <hr class="divider">
         <div class="stars">★★★★★</div>
         <p class="testimonial-text">
-          The hydration boost is incredible! My dry skin feels replenished and smooth all day. 
-          I love how lightweight the products feel while delivering powerful results.
+          “Bei unseren Kunden und Geschäftspartnern kommt der Champagner zu Weihnachten sehr gut an.
+Ansprechendes Design. Hochwertiger Geschmack! Schnelle Lieferung und TOP Service. Im
+nächsten Jahr gerne wieder!”
         </p>
       </div>
 
       <div class="testimonial-card">
         <div class="card-header">
-          <img src="images/march.jpg" alt="Mia Reynolds">
-          <h4>Mia Reynolds</h4>
+          <img src="images/memo.jpg" alt="Mia Reynolds">
+          <h4>Vorsitzender Finanzclub Marburg e.V.</h4>
         </div>
          <hr class="divider">
         <div class="stars">★★★★★</div>
         <p class="testimonial-text">
-          I’m impressed with how quickly I noticed improvements. 
-          Fine lines softened, and my skin’s texture became smoother. 
-          Plus, knowing it’s cruelty-free makes me feel good.
+          „Die Kommunikation war vom ersten Kontakt bis zur fertigen Gestaltung der Flaschen
+durchweg sehr angenehm. Unsere Produktwünsche wurden genau nach unseren
+Vorstellungen umgesetzt, sodass die individualisierten Champagnerflaschen sehr gut bei
+unseren Partnern ankamen. Gerne greifen wir auch in Zukunft auf Ihre Produkte zurück!“
         </p>
       </div>
     </div>
@@ -368,11 +383,10 @@
 <section class="clients-section">
     <h2>UNSERE KUNDEN</h2>
     <div class="clients-logos">
-      <img src="images/riggs.png" alt="Riggs">
-      <img src="images/lladro.webp" alt="Lladró">
-      <img src="images/guerlain.png" alt="Guerlain">
-      <img src="images/gucci.png" alt="Gucci">
-      <img src="images/purobio.png" alt="PuroBIO">
+      <img src="images/knauf.png" alt="Riggs">
+      <img src="images/volksbank.webp" alt="Lladró">
+      <img src="images/fraport.png" alt="Guerlain">
+      <img src="images/bank2.png" alt="Gucci">
     </div>
   </section>
 
@@ -404,21 +418,27 @@
 
   <section class="stats-section">
     <div class="stat-item">
-      <h2>156</h2>
-      <h3>Products</h3>
-      <p>Each piece is thoughtfully crafted from premium materials to elevate your everyday style with elegance and durability. Whether you're adding a subtle touch or making a bold statement, our accessories are designed to complement and enhance your look with lasting quality.</p>
+      <h2>9 L</h2>
+      <h3>Flaschenvielfalt</h3>
+      <p>Von der klassischen 0,75 l Standardflasche bis hin zu imposanten 9 l Salmanazar – IHR
+CHAMPAGNER bietet edle Formate für jeden Anlass. Jede Flasche kann mit einem
+personalisierten Etikett gestaltet werden und wird so zu einem einzigartigen Geschenk.</p>
     </div>
 
     <div class="stat-item">
-      <h2>1500+</h2>
-      <h3>5 Star reviews</h3>
-      <p>Our customers’ satisfaction speaks for itself — with over 1,500 five-star reviews, we are a trusted destination for those who value quality, style, and exceptional service. Each review is a reflection of our commitment to excellence and the lasting impression our products make.</p>
+      <h2>2018</h2>
+      <h3>Auszeichnung „Best of E-Commerce“</h3>
+      <p>IHR CHAMPAGNER wurde 2018 mit dem Preis „Best of 2018“ im Bereich E-
+Commerce ausgezeichnet. Die Verbindung aus Qualität, Design und innovativem Online-
+Shop überzeugt sowohl Privat- als auch Geschäftskunden.</p>
     </div>
 
     <div class="stat-item">
-      <h2>est 1984</h2>
-      <h3>Trusted for 20+ years</h3>
-      <p>With decades of experience behind us, the journey from a small passion project to a trusted name in quality and design has been guided by dedication and vision. Our long-standing history is a reflection of unwavering commitment to craftsmanship and timeless style.</p>
+      <h2>1000+</h2>
+      <h3>Zufriedene Kunden</h3>
+      <p>Von Hochzeiten über Jubiläen bis zu Firmenevents – zahlreiche Kunden loben die
+schnelle Lieferung, die individuelle Gestaltung und den exzellenten Geschmack unseres
+Champagners. Jedes Feedback ist ein Beweis für bleibende Genussmomente.</p>
     </div>
   </section>
 
