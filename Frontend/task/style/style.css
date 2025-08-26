@@ -1023,7 +1023,7 @@ nav {
     .badges{
       display:flex; flex-direction:column; align-items:flex-start; gap:12px;
     }
-    .badges img{ display:block; max-width:130px; height:auto; }
+    .badges img{ display:block; max-width:90px; height:auto; }
 
     /* Newsletter */
     .newsletter form{
