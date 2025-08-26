@@ -401,7 +401,7 @@ nav {
   flex: 1;
   min-width: 300px;    /* было 200px → теперь шире */
   max-width: 360px;    /* ограничение ширины */
-  max-height: 580px;
+  max-height: 680px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   display: flex;
