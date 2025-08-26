@@ -5,7 +5,12 @@
       --bg:#ffffff;
       --border:#eee;
     }
+
     *{box-sizing:border-box}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Vidaloka", serif;
+}
     body{
       margin:0;
       font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
