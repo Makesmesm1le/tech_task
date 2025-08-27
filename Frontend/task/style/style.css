@@ -451,7 +451,7 @@ nav {
 
     .product-price span {
       display: block;
-      font-size: 14px;
+      font-size: 15px;
       color: #888;
       text-decoration: line-through;
       margin-top: 3px;
@@ -469,7 +469,7 @@ nav {
     }
 
     .availability {
-      font-size: 13px;
+      font-size: 15px;
       color: #2ecc71;
       margin-top: auto;
     }
@@ -671,7 +671,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
 }
 .submit-btn {
@@ -796,7 +796,7 @@ nav {
     }
 
     .testimonial-text {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.6;
       color: #444;
     }
