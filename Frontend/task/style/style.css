@@ -175,17 +175,27 @@ nav {
   background-image: url("../images/champ.png");
   background-size: cover;
   background-position: center;
-  height: 700px; /* можешь менять высоту */
+  height: 700px; /* десктоп */
   display: flex;
-  align-items: flex-end;   /* прижимаем контент вниз */
-  justify-content: flex-start; /* прижимаем влево */
-  padding: 80px; /* отступы от краёв */
-  color: #e5d8b8; /* текст белым поверх фона */
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 80px;
+  color: #e5d8b8;
 }
-
 .hero-content h1 {
   font-size: 2.5rem;
   margin: 0;
+}
+/* мобильная версия */
+@media (max-width: 768px) {
+  .hero {
+    height: 350px;      /* половина высоты */
+    padding: 40px 20px; /* уменьшаем внутренние отступы */
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;  /* заголовок меньше, чтобы влезал */
+  }
 }
 
 .features {
@@ -255,7 +265,7 @@ nav {
 
 
 
-  .description {
+ .description {
       padding: 60px 20px;
       max-width: 1600px;
       margin: 0 auto;
@@ -830,7 +840,7 @@ nav {
       color: #888888
     }
 
-      .clients-section {
+   .clients-section {
   text-align: center;
   padding: 50px 20px;
 }
