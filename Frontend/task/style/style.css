@@ -827,40 +827,81 @@ nav {
       color: #888888
     }
 
-    .clients-section {
-      text-align: center;
-      padding: 50px 20px;
-    }
+      .clients-section {
+  text-align: center;
+  padding: 50px 20px;
+}
 
-    .clients-section h2 {
-      font-size: 44px;
-      line-height:1.5;
-      font-weight:400;
-      letter-spacing: 1px;
-      margin-bottom: 40px;
-    }
+.clients-section h2 {
+  font-size: 44px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
 
-    .clients-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
+.clients-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
 .clients-logos img {
   max-height: 80px;
-  max-width: 100%;   /* 🔹 ограничиваем ширину */
+  max-width: 100%;
   height: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-  display: block;     /* чтобы убрать лишние отступы */
-  margin: 0 auto;     /* центрируем */
+  display: block;
+  margin: 0 auto;
+
+  filter: grayscale(100%) brightness(90%);
+  opacity: 0.8;
+  transform: scale(1);
+  transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+  position: relative; /* нужно для оверлея */
+  z-index: 1;
 }
 
-    .clients-logos img:hover {
-      filter: grayscale(0%);
-    }
+/* Оборачиваем каждую картинку в контейнер */
+.clients-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 120px; /* увеличил немного, чтобы было просторнее */
+}
+
+.clients-logos .logo-item {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 15px;  /* 🔹 расстояние по бокам */
+}
+
+/* Шторка */
+.clients-logos .logo-item::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, white 0%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 2s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clients-logos .logo-item:hover img {
+  filter: grayscale(0%) brightness(105%);
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.clients-logos .logo-item:hover::after {
+  transform: translateX(100%);
+}
+
 @media (max-width: 768px) {
   .clients-logos {
     flex-direction: column;
