@@ -255,7 +255,7 @@ nav {
 
 
 
- .description {
+  .description {
       padding: 60px 20px;
       max-width: 1600px;
       margin: 0 auto;
@@ -273,10 +273,7 @@ nav {
       margin-bottom: 40px;
     }
 
-    .description .columns {
-      display: flex;
-      flex-direction: column;
-      gap: 80px;
+
     }
 
     .description .column {
@@ -300,12 +297,18 @@ nav {
       text-align:center;  
     }
 
-    /* Десктопная версия */
-    @media (min-width: 768px) {
-      .description .columns {
-        flex-direction: row;
-        text-align: left;
-      }
+  .description .columns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;   /* 🔹 мобильная версия – меньше отступ */
+}
+
+@media (min-width: 768px) {
+  .description .columns {
+    flex-direction: row;
+    text-align: left;
+    gap: 80px;  /* 🔹 десктопная версия – как раньше */
+  }
 
       .description .column {
         padding: 0 20px;
