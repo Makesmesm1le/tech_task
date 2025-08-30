@@ -261,10 +261,49 @@ nav {
   }
 }
 
+/* 📱 Мобильная версия: компактный вертикальный список */
 @media (max-width: 600px) {
-  .feature-card {
-    width: 100%; /* на мобиле карточка на всю ширину */
-    max-width: 320px;
+  .features-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+  }
+
+  .feature-card{
+    /* сбрасываем десктопные настройки */
+    width:100% !important;
+    max-width:520px;
+    min-height:0 !important;
+    height:auto !important;
+    padding:10px 12px !important;
+
+    display:flex !important;
+    flex-direction:row !important;           /* картинка слева, текст справа */
+    align-items:center !important;
+    justify-content:flex-start !important;   /* чтобы текст не «уезжал» вправо */
+    gap:12px;
+
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  .feature-card img{
+    height:110px !important;  /* ✅ требуемый размер */
+    width:auto;
+    margin:0 !important;
+    flex:0 0 130px;           /* фиксируем ширину под изображение */
+  }
+
+  .feature-card p{
+    margin:0;
+    text-align:left;          /* текст сразу справа от картинки */
+    line-height:1.25;
+    font-size:1rem;
+    font-weight:500;
+    flex:0 1 auto; 
+    max-width:calc(100% - 130px - 12px); /* чтобы не прилипал к правому краю */
   }
 }
 
