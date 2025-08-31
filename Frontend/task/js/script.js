@@ -81,3 +81,25 @@ lightbox.addEventListener('click', (e) => {
     });
   });
 
+  document.querySelectorAll('.lang-toggle').forEach(toggle => {
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    const dropdown = this.closest('.lang-dropdown');
+    const menu = dropdown.querySelector('.lang-menu');
+
+    // закрываем все открытые, кроме текущего
+    document.querySelectorAll('.lang-menu').forEach(m => {
+      if (m !== menu) m.style.display = 'none';
+    });
+
+    // переключаем текущее
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  });
+});
+
+// закрытие при клике вне меню
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.lang-dropdown')) {
+    document.querySelectorAll('.lang-menu').forEach(m => m.style.display = 'none');
+  }
+});
